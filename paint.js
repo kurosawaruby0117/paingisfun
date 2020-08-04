@@ -90,6 +90,9 @@ function handleSaveBtn(){
     link.download=`${input}`;
     link.click();
 }
+function handleCM(event) {
+    event.preventDefault();
+  }
 
 function handleDeleteAll(){
     var result=confirm("Do you want to delete this Picture?  You can't Never restore this");
@@ -119,6 +122,8 @@ if(canvas){
     canvas.addEventListener("mouseup",stopPainting);
     canvas.addEventListener("mouseleave",stopPainting);
     canvas.addEventListener("click",handCanvasClick);
+    canvas.addEventListener("contextmenu", handleCM);
+
 
 }
 
